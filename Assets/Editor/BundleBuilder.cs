@@ -7,6 +7,6 @@ public class BundleBuilder : Editor
 {
     [MenuItem("Assets/Build AssetBundles")]
     static void BuildAllAssetBundles(){
-        BuildPipeline.BuildAssetBundles(@"/Users/guo/Desktop/UnityBundles", BuildAssetBundleOptions.ChunkBasedCompression, BuildTarget.StandaloneOSX);
+        BuildPipeline.BuildAssetBundles(@"/Users/guo/Documents/codes/Unity/4995/AssetsBundleTest/UnityBundles", BuildAssetBundleOptions.ChunkBasedCompression, BuildTarget.Android);
     }
 }
