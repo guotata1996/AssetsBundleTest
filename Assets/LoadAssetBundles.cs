@@ -2,16 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.UI;
 
 public class LoadAssetBundles : MonoBehaviour
 {
     // Start is called before the first frame update
-    string bundleURL = @"https://drive.google.com/open?id=1LytrMiJUFMO8cPWKEVjv46h90A98BtI3";
+    string baseBundleURL = @"https://raw.githubusercontent.com/guotata1996/AssetsBundleTest/master/UnityBundles/";
     public string assetName;
     AssetBundle bundle;
 
+    public Text bundleNameInput;
+
     IEnumerator GetAssetBundle() {
-        UnityWebRequest www = UnityWebRequestAssetBundle.GetAssetBundle("https://drive.google.com/open?id=1LytrMiJUFMO8cPWKEVjv46h90A98BtI3");
+        UnityWebRequest www = UnityWebRequestAssetBundle.GetAssetBundle(baseBundleURL + bundleNameInput.text);
         yield return www.SendWebRequest();
  
         if(www.isNetworkError || www.isHttpError) {
@@ -26,7 +29,7 @@ public class LoadAssetBundles : MonoBehaviour
         }
     }
 
-    void Start()
+    public void UpdateBundle()
     {
         StartCoroutine(GetAssetBundle());
     }

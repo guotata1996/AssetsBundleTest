@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1997952142
+CRC: 3292080603
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 67635d3f5282fc04870e8c8a431c5ccb
+    Hash: 419b981e801f3d8869cebe053ee3762e
   TypeTreeHash:
     serializedVersion: 2
     Hash: 798811b7255c82b34a9f8780c2ce846a
@@ -24,6 +24,6 @@ ClassTypes:
 - Class: 48
   Script: {instanceID: 0}
 Assets:
-- Assets/Models/HumanModel Variant.prefab
-- Assets/Models/planeArrorsModel.prefab
+- Assets/Models/rotation3DIndiScaled.prefab
+- Assets/Models/HumanModelScaled Variant.prefab
 Dependencies: []
